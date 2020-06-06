@@ -1,63 +1,113 @@
 package fromCodeup;
 
+import java.util.Scanner;
+
 public class ControlFlowExercises {
     public static void main(String[] args) {
-        // Loop Basics
+//        // Loop Basics
+//
+//        // While
+//        int i = 5;
+//        while(i <= 15) {
+//            System.out.println("i before : " + i); // 5,6,7,8,9,10,11,12,13,14,15
+//            i++;
+////            System.out.println("i after : " + i); // 6,7,8,9,10,11,12,13,14,15,16
+//        }
+////        System.out.println("i from the outside of while loop: " + i); // 16
+//        // Do While
+//        // 0 - 100
+//        int counter = 0; // initializer
+//        do {
+//            System.out.println("counter = " + counter);
+//            counter += 2;
+//        } while(counter <= 100);
+//        // 100 - -10
+//        int counterB = 100; // initializer
+//        do {
+//            System.out.println("counterB = " + counterB);
+//            counterB -= 5;
+//        } while(counterB >= -10);
+//        // 2 - sqrt(num)
+//        long counterPOW = 2L; // initializer
+//        do {
+//            System.out.println("counterPOW = " + counterPOW);
+//            counterPOW = (long) Math.pow(counterPOW,2);
+//        } while(counterPOW < 1000000);
+//
+//        // Using For loop
+//        for (int iforloop = 5; iforloop <= 15; iforloop++) {
+//            System.out.println("iforloop: " + iforloop);
+//        }
+//        for (int countByTwo = 0; countByTwo <= 100; countByTwo = countByTwo+2) {
+//            System.out.println("countByTwo using For loop: " + countByTwo);
+//        }
+//        for (int countBackward = 100; countBackward >= -10; countBackward = countBackward-5) {
+//            System.out.println("countBackward = " + countBackward);
+//        }
+//        for (long countPow = 2L; countPow < 1000000; countPow *= countPow) {
+//            System.out.println("countPow = " + countPow);
+//        }
+//
+//        // Fizzbuzz
+//        for (int fizzBuzz = 1; fizzBuzz <= 100; fizzBuzz++){
+//            if (fizzBuzz % 3 == 0 && fizzBuzz % 5 == 0) {
+//                System.out.println("FizzBuzz");
+//            } else if(fizzBuzz % 3 == 0) {
+//                System.out.println("Fizz");
+//            } else if(fizzBuzz % 5 == 0) {
+//                System.out.println("Buzz");
+//            } else {
+//                System.out.println(fizzBuzz);
+//            }
+//        }
 
-        // While
-        int i = 5;
-        while(i <= 15) {
-            System.out.println("i before : " + i); // 5,6,7,8,9,10,11,12,13,14,15
-            i++;
-//            System.out.println("i after : " + i); // 6,7,8,9,10,11,12,13,14,15,16
-        }
-//        System.out.println("i from the outside of while loop: " + i); // 16
-        // Do While
-        // 0 - 100
-        int counter = 0; // initializer
-        do {
-            System.out.println("counter = " + counter);
-            counter += 2;
-        } while(counter <= 100);
-        // 100 - -10
-        int counterB = 100; // initializer
-        do {
-            System.out.println("counterB = " + counterB);
-            counterB -= 5;
-        } while(counterB >= -10);
-        // 2 - sqrt(num)
-        long counterPOW = 2L; // initializer
-        do {
-            System.out.println("counterPOW = " + counterPOW);
-            counterPOW = (long) Math.pow(counterPOW,2);
-        } while(counterPOW < 1000000);
+        Scanner scanner = new Scanner(System.in);
+//        boolean userContinues = true;
+//        do {
+//            System.out.println("What number would you like to go up to? ");
+//            int userInt = scanner.nextInt();
+//            System.out.println();
+//            System.out.println("Here is your table!");
+//            System.out.println();
+//            System.out.println("number | squared | cubed");
+//            System.out.println("------ | ------- | -----");
+//            for(int i = 1; i <= userInt; i++){
+//                System.out.format("%-6d", i);
+//                System.out.print(" | ");
+//                System.out.format("%-7d", i * i);
+//                System.out.print(" | ");
+//                System.out.print(i * i * i);
+//                System.out.println();
+//            }
+//            System.out.print("Would you like to enter another number (y/n)? ");
+//            String userResponse = scanner.next();
+//            if (!userResponse.equalsIgnoreCase("y")) {
+//                userContinues = false;
+//            }
+//        } while (userContinues);
 
-        // Using For loop
-        for (int iforloop = 5; iforloop <= 15; iforloop++) {
-            System.out.println("iforloop: " + iforloop);
-        }
-        for (int countByTwo = 0; countByTwo <= 100; countByTwo = countByTwo+2) {
-            System.out.println("countByTwo using For loop: " + countByTwo);
-        }
-        for (int countBackward = 100; countBackward >= -10; countBackward = countBackward-5) {
-            System.out.println("countBackward = " + countBackward);
-        }
-        for (long countPow = 2L; countPow < 1000000; countPow *= countPow) {
-            System.out.println("countPow = " + countPow);
-        }
+        boolean gradeSystem = true;
+        do {
+            System.out.println("Enter numerical grade from 0 to 100");
+            int userInput_grade = scanner.nextInt();
+            System.out.println("userInput_grade = " + userInput_grade);
 
-        // Fizzbuzz
-        for (int fizzBuzz = 1; fizzBuzz <= 100; fizzBuzz++){
-            if (fizzBuzz % 3 == 0 && fizzBuzz % 5 == 0) {
-                System.out.println("FizzBuzz");
-            } else if(fizzBuzz % 3 == 0) {
-                System.out.println("Fizz");
-            } else if(fizzBuzz % 5 == 0) {
-                System.out.println("Buzz");
-            } else {
-                System.out.println(fizzBuzz);
+            if (userInput_grade >= 88) {
+                System.out.println("A");
+            } else if (userInput_grade >= 80) {
+                System.out.println("B");
+            } else if (userInput_grade >= 67) {
+                System.out.println("C");
+            } else if (userInput_grade >= 60) {
+                System.out.println("D");
+            } else if (userInput_grade >= 0) {
+                System.out.println("F");
             }
-        }
-
+            System.out.println("Do tou wish to enter a new grade? [y/n]");
+            String userInput = scanner.next();
+            if (!userInput.equalsIgnoreCase("y")){
+                gradeSystem = false;
+            }
+        } while (gradeSystem);
     }
 }
