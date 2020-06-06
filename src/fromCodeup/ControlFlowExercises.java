@@ -46,5 +46,18 @@ public class ControlFlowExercises {
             System.out.println("countPow = " + countPow);
         }
 
+        // Fizzbuzz
+        for (int fizzBuzz = 1; fizzBuzz <= 100; fizzBuzz++){
+            if (fizzBuzz % 3 == 0 && fizzBuzz % 5 == 0) {
+                System.out.println("FizzBuzz");
+            } else if(fizzBuzz % 3 == 0) {
+                System.out.println("Fizz");
+            } else if(fizzBuzz % 5 == 0) {
+                System.out.println("Buzz");
+            } else {
+                System.out.println(fizzBuzz);
+            }
+        }
+
     }
 }
