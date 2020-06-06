@@ -22,7 +22,7 @@ public class ConsoleExercises {
         System.out.println("param3: " + param3);
 
         System.out.println("Give me the length: ");
-        float length = Float.parseFloat(sc.nextLine().);
+        float length = Float.parseFloat(sc.nextLine());
         System.out.println("Give me the width: ");
         float width = Float.parseFloat(sc.nextLine());
 
