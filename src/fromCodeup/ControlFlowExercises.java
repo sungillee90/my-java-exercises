@@ -1,9 +1,13 @@
 package fromCodeup;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class ControlFlowExercises {
     public static void main(String[] args) {
+        ControlFlowExercises run = new ControlFlowExercises();
+        run.printFooBar();
+
+        run.reverseCharacters("the cat is fat");
 //        // Loop Basics
 //
 //        // While
@@ -86,28 +90,145 @@ public class ControlFlowExercises {
 //            }
 //        } while (userContinues);
 
-        boolean gradeSystem = true;
-        do {
-            System.out.println("Enter numerical grade from 0 to 100");
-            int userInput_grade = scanner.nextInt();
-            System.out.println("userInput_grade = " + userInput_grade);
+//        boolean gradeSystem = true;
+//        do {
+//            System.out.println("Enter numerical grade from 0 to 100");
+//            int userInput_grade = scanner.nextInt();
+//            System.out.println("userInput_grade = " + userInput_grade);
+//
+//            if (userInput_grade >= 88) {
+//                System.out.println("A");
+//            } else if (userInput_grade >= 80) {
+//                System.out.println("B");
+//            } else if (userInput_grade >= 67) {
+//                System.out.println("C");
+//            } else if (userInput_grade >= 60) {
+//                System.out.println("D");
+//            } else if (userInput_grade >= 0) {
+//                System.out.println("F");
+//            }
+//            System.out.println("Do tou wish to enter a new grade? [y/n]");
+//            String userInput = scanner.next();
+//            if (!userInput.equalsIgnoreCase("y")){
+//                gradeSystem = false;
+//            }
+//        } while (gradeSystem);
 
-            if (userInput_grade >= 88) {
-                System.out.println("A");
-            } else if (userInput_grade >= 80) {
-                System.out.println("B");
-            } else if (userInput_grade >= 67) {
-                System.out.println("C");
-            } else if (userInput_grade >= 60) {
-                System.out.println("D");
-            } else if (userInput_grade >= 0) {
-                System.out.println("F");
-            }
-            System.out.println("Do tou wish to enter a new grade? [y/n]");
-            String userInput = scanner.next();
-            if (!userInput.equalsIgnoreCase("y")){
-                gradeSystem = false;
-            }
-        } while (gradeSystem);
+//        for (int fizzBuzz = 1; fizzBuzz <= 100; fizzBuzz++){
+//            if (fizzBuzz % 3 == 0 && fizzBuzz % 5 == 0) {
+//                System.out.println("FizzBuzz");
+//            } else if(fizzBuzz % 3 == 0) {
+//                System.out.println("Fizz");
+//            } else if(fizzBuzz % 5 == 0) {
+//                System.out.println("Buzz");
+//            } else {
+//                System.out.println(fizzBuzz);
+//            }
+//        }
+
+
+//        for (int f1 = 1; f1 <= 100; f1++){
+//            if (f1 % 6 == 0) {
+//                System.out.println("baz");
+//            } else if(f1 % 2 == 0) {
+//                System.out.println("foo");
+//            } else if(f1 % 3 == 0) {
+//                System.out.println("bar");
+//            } else {
+//                System.out.println(f1);
+//            }
+//        }
+
     }
+
+//    public static void printFooBar() {
+//        for (int f1 = 1; f1 <= 100; f1++){
+//            if (f1 % 2 == 0 && f1 % 6 == 0) {
+//                System.out.println("baz");
+//            } else if(f1 % 2 == 0) {
+//                System.out.println("foo");
+//            } else if(f1 % 3 == 0) {
+//                System.out.println("bar");
+//            } else {
+//                System.out.println(f1);
+//            }
+//        }
+//    }
+    public void printFooBar() {
+        for (int f1 = 1; f1 <= 100; f1++){
+            if (f1 % 6 == 0 && f1 % 2 == 0) {
+                System.out.println("baz");
+            } else if(f1 % 2 == 0) {
+                System.out.println("foo");
+            } else if(f1 % 3 == 0) {
+                System.out.println("bar");
+            } else {
+                System.out.println(f1);
+            }
+        }
+    }
+    public String reverseCharacters(String input) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the String input: ");
+
+        String inputSC = sc.nextLine();
+
+        // First Method
+//        StringBuilder inputSC1 = new StringBuilder();
+//
+//        inputSC1.append(inputSC);
+//
+//        inputSC1 = inputSC1.reverse();
+//
+//        System.out.println(inputSC1);
+//        return String.valueOf(inputSC1);
+        // SOLN
+        StringBuilder reverseInputSC1 = new StringBuilder();
+        String[] words = inputSC.split(" ");
+        for (String word : words)
+        {
+            String reverseWord = new StringBuilder(word).reverse().toString();
+            reverseInputSC1.append(reverseWord + " ");
+        }
+        System.out.println(reverseInputSC1.toString().trim());
+
+        return (reverseInputSC1.toString().trim());
+
+//        char[] hello = input.toCharArray();
+//        List<Character> al = new ArrayList<>();
+//        for (char c: hello)
+//            al.add(c);
+//
+//        Collections.reverse(al);
+//
+//        ListIterator li = al.listIterator();
+//        while(li.hasNext())
+//            System.out.println(li.next());
+//
+//        return String.valueOf(al);
+
+//        al = Arrays.asList(str);
+//        for (String s: al) {
+//            System.out.println(s);
+//        }
+//        for (int i = al.size(); i >= 0; i--) {
+//
+//            reverseCharacters(al.toString());
+//        }
+//
+//        Collections.reverse(al);
+//
+////        String stringB = new StringBuilder(inputSC).toString();
+////
+////
+//        return String.valueOf(al);
+
+    }
+//    public static ArrayList printElements(ArrayList<Integer> alist)
+//    {
+//        for (int i = 0; i < alist.size(); i++) {
+//            System.out.print(alist.get(i) + " ");
+//        }
+//    }
+
 }
