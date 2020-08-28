@@ -10,6 +10,8 @@ public class BinaryDecimal {
 
         String s = Integer.toBinaryString(userInputInt);
         System.out.println("To Binary = " + s);
-        
+
+        s = new StringBuilder(s).reverse().toString();
+        System.out.println("To reverse the output = " + s);
     }
 }
