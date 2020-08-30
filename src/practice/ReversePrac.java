@@ -10,6 +10,9 @@ public class ReversePrac {
         String userInput = sc.nextLine();
 
         StringBuilder reverseInputSC1 = new StringBuilder();
+        // char[] => array
+        //  String[] words = new String[words.length()]
+        // type[]
         String[] words = userInput.split(" ");
 
         for (String word : words) {
