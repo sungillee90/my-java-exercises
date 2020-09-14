@@ -6,4 +6,5 @@ public class AInterfaceImplement implements AInterface{
     public void funcA() {
         System.out.println("This is Option AAA");
     }
+
 }
