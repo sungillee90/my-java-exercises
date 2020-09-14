@@ -1,7 +1,5 @@
 package practice;
 
-public class Weapon {
-
+public interface Weapon {
     public void attack();
-
 }
