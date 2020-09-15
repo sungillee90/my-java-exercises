@@ -1,4 +1,4 @@
-package practice;
+package practice.SimpleAdventureGame;
 
 public class GameMain {
     public static void main(String[] args) {
