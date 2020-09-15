@@ -1,4 +1,4 @@
-package practice.TemplateMethod;
+package practice.TemplateMethod.Library;
 
 
 public abstract class AbsGameConnectionHelper {
