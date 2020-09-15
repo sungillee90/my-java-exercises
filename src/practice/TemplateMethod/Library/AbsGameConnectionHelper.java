@@ -24,6 +24,8 @@ public abstract class AbsGameConnectionHelper {
         int i = authorization(userName);
 
         switch (i) {
+            case -1:
+                throw new Error ("Shut Down");
             case 0:
                 System.out.println("Game Manager");
                 break;

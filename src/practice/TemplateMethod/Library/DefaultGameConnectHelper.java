@@ -3,7 +3,8 @@ package practice.TemplateMethod.Library;
 public class DefaultGameConnectHelper extends AbsGameConnectionHelper{
     @Override
     protected String doSecurity(String string) {
-        System.out.println("Decoded");
+//        System.out.println("Decoded");
+        System.out.println("Enforced Decoded");
         return string;
     }
 
