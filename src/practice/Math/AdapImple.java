@@ -4,7 +4,7 @@ public class AdapImple implements Adapter {
 
     @Override
     public Float twiceOf(Float f) {
-        return (float) Math.twoTime(f.doubleValue());
+        return Math.doubled(f.doubleValue()).floatValue();
     }
 
     @Override
