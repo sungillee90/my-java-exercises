@@ -11,10 +11,4 @@ public class Shape implements Cloneable{
     public void setId(String id) {
         this.id = id;
     }
-
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
-    }
-
 }
