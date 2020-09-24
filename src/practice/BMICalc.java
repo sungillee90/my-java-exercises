@@ -16,7 +16,7 @@ public class BMICalc {
         float BMI = (float) (Math.round(calcBMI *100)/100.0);
         System.out.println("Your BMI is = " + BMI);
 
-        int result = 1%10;
+        int result = 81%10;
         System.out.println("result = " + result);
     }
 }
