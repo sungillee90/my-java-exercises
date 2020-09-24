@@ -27,4 +27,8 @@ public class Circle {
     public void setR(int r) {
         this.r = r;
     }
+    public Circle copy() throws CloneNotSupportedException {
+        Circle circle = (Circle) clone();
+        return circle;
+    }
 }
