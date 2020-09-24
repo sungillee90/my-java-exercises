@@ -34,4 +34,12 @@ public class Computer {
     public void setStorage(String storage) {
         this.storage = storage;
     }
+
+    @Override
+    public String toString() {
+        return "Computer" +
+                "cpu='" + cpu + '\'' +
+                ", ram='" + ram + '\'' +
+                ", storage='" + storage + '\'';
+    }
 }
