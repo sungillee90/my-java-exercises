@@ -1,4 +1,4 @@
-package practice.AbsFacPattern;
+package practice.AbsFacPattern.abst;
 
 public interface BikeFactory {
     public Body createBosy();

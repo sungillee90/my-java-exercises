@@ -1,17 +1,17 @@
 package practice.AbsFacPattern.Sam;
 
-import practice.AbsFacPattern.BikeFactory;
-import practice.AbsFacPattern.Body;
-import practice.AbsFacPattern.Wheel;
+import practice.AbsFacPattern.abst.BikeFactory;
+import practice.AbsFacPattern.abst.Body;
+import practice.AbsFacPattern.abst.Wheel;
 
 public class SamFactory implements BikeFactory {
     @Override
     public Body createBosy() {
-        return null;
+        return new SamBody();
     }
 
     @Override
     public Wheel createWheel() {
-        return null;
+        return new SamWheel();
     }
 }
