@@ -7,11 +7,11 @@ import practice.AbsFacMyPrac.abst.TextArea;
 public class MacGuiFac implements GuiFac {
     @Override
     public Button createButton() {
-        return null;
+        return new MacButton();
     }
 
     @Override
     public TextArea createTextArea() {
-        return null;
+        return new MacTextArea();
     }
 }

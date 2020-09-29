@@ -5,6 +5,6 @@ import practice.AbsFacMyPrac.abst.TextArea;
 public class MacTextArea implements TextArea {
     @Override
     public String getText() {
-        return null;
+        return "Mac Get Text.";
     }
 }

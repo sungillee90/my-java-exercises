@@ -1,4 +1,10 @@
 package practice.AbsFacMyPrac.Mac;
 
-public class MacButton {
+import practice.AbsFacMyPrac.abst.Button;
+
+public class MacButton implements Button {
+    @Override
+    public void click() {
+        System.out.println("Macbook Button was clicked!");
+    }
 }
