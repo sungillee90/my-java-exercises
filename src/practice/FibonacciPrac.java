@@ -7,7 +7,7 @@ public class FibonacciPrac {
         System.out.println(run.fib(5));
     }
     public int fib(int N) {
-
+// base cases
         if (N == 0){
             return 0;
         }
