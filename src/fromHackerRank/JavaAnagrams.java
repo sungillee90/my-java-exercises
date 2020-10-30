@@ -1,9 +1,11 @@
 package fromHackerRank;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class JavaAnagrams {
     static boolean isAnagram(String a, String b) {
         // Complete the function
+
         int a_length = a.length();
         int b_length = b.length();
 
@@ -13,6 +15,15 @@ public class JavaAnagrams {
 
         a = a.toLowerCase();
         b = b.toLowerCase();
+
+        char[] a_chars = a.toCharArray();
+        char[] b_chars = b.toCharArray();
+
+        Arrays.sort(a_chars);
+        Arrays.sort(b_chars);
+
+        if (a_chars.equals((b_chars)) return true;
+        else return false;
 
         int[] char_freq = new int[26];
         for (int i=0; i<a_length; i++) {
