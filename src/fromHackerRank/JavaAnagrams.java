@@ -16,14 +16,14 @@ public class JavaAnagrams {
         a = a.toLowerCase();
         b = b.toLowerCase();
 
-        char[] a_chars = a.toCharArray();
-        char[] b_chars = b.toCharArray();
-
-        Arrays.sort(a_chars);
-        Arrays.sort(b_chars);
-
-        if (a_chars.equals((b_chars)) return true;
-        else return false;
+//        char[] a_chars = a.toCharArray();
+//        char[] b_chars = b.toCharArray();
+//
+//        Arrays.sort(a_chars);
+//        Arrays.sort(b_chars);
+//
+//        if (a_chars.equals((b_chars)) return true;
+//        else return false;
 
         int[] char_freq = new int[26];
         for (int i=0; i<a_length; i++) {
