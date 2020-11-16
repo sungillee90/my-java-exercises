@@ -1,57 +1,57 @@
 package fromHackerRank;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Comparator;
+import java.util.PriorityQueue;
 
 public class JavaPriorityQueue {
-
-    /*
-     * Create the Student and Priorities classes here.
-     */
     class Student {
         private int token;
-        private String firstName;
+        private String fname;
         private double cgpa;
-        public Student(int id, String name, double cgpa) {
+
+        public Student(int id, String fname, double cgpa) {
             super();
             this.token = id;
-            this.firstName = name;
+            this.fname = fname;
             this.cgpa = cgpa;
         }
         public int getToken() {
             return token;
         }
         public String getName() {
-            return firstName;
+            return fname;
         }
         public double getCgpa() {
             return cgpa;
         }
     }
-
     class Priorities {
-        public List<String> getStudents(List<String> events) {
-            PriorityQueue<Student> studentQueue = new PriorityQueue(Comparator.comparing(Student::getCgpa).reversed().thenComparing(Student::getName).thenComparing(Student::getToken));
+        public List<Student> getStudents(List<String> events) {
+            PriorityQueue<Student> student_queue = new PriorityQueue(Comparator.comparing(Student::getCgpa).reversed().thenComparing(Student::getName).thenComparing(Student::getToken));
             List<Student> students = new ArrayList<Student>();
             for (String e:events) {
-                Scanner sc = new Scanner(e);
-                String event = sc.next();
+                Scanner in = new Scanner(e);
+                String event = in.next();
                 if (event.equals("ENTER")) {
-                    String name = sc.next();
-                    float cgpa = sc.nextFloat();
-                    int token = sc.nextInt();
+                    String name = in.next();
+                    float cgpa = in.nextFloat();
+                    int token = in.nextInt();
                     Student student = new Student(token, name, cgpa);
-                    studentQueue.add(student);
+                    student_queue.add(student);
                 } else if (event.equals("SERVED")) {
-                    Student first = studentQueue.poll();
+                    Student first = student_queue.poll();
                 }
-                sc.close();
+                in.close();
             }
-            Student first = studentQueue.poll();
+            Student first = student_queue.poll();
             if (first == null) {
                 return students;
             } else {
                 while (first != null) {
                     students.add(first);
-                    first = studentQueue.poll();
+                    first = student_queue.poll();
                 }
                 return students;
             }
@@ -59,8 +59,7 @@ public class JavaPriorityQueue {
     }
 
 
-
-    public class Solution {
+    public static class Solution {
         private final static Scanner scan = new Scanner(System.in);
         private final static Priorities priorities = new Priorities();
 
