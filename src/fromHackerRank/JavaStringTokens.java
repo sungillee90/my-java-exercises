@@ -9,6 +9,12 @@ public class JavaStringTokens {
 
         scan.close();
 
+        s = s.trim();
+        if (s.length() == 0) {
+            System.out.println(0);
+            return;
+        }
+
         String[] words = s.split("[^a-zA-Z]+");
         System.out.println(words.length);
 
