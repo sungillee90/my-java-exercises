@@ -6,7 +6,7 @@ import java.math.*;
 import java.util.regex.*;
 
 public class JavaInheritanceI {
-    class Animal{
+    static class Animal{
         void walk()
         {
             System.out.println("I am walking");
