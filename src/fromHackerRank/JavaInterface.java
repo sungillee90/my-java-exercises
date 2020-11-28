@@ -7,7 +7,7 @@ public class JavaInterface {
     }
 
     //Write your code here
-    static class MyCalculator extends AdvancedArithmetic {
+    static class MyCalculator implements AdvancedArithmetic {
         public int divisor_sum(int n) {
             int sum = 0;
             for (int i = 1; i <= n; i++) {
