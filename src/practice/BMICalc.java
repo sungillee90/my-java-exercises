@@ -17,6 +17,11 @@ public class BMICalc {
         System.out.println("Your BMI is = " + BMI);
 
         // make a table for BMI chart
+        String[] columnNames = {"First Name",
+                "Last Name",
+                "Height",
+                "Weight",
+                "BMI"};
 
 //        int result = 81%10;
 //        System.out.println("result = " + result);
