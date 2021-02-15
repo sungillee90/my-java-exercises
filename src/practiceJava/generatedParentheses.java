@@ -3,8 +3,8 @@ package practiceJava;
 import java.util.ArrayList;
 import java.util.List;
 
-public class generateParentheses {
-    static class Solution {
+public class generatedParentheses {
+    class Solution {
         // use backtracking (almost same as recursing)
 
         public List<String> generateParenthesis(int n) {
